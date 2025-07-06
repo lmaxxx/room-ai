@@ -1,4 +1,4 @@
-import HomeView from "@/modules/home/ui/views/home-view";
+import SignUpView from "@/modules/auth/ui/views/sign-up-view";
 import {auth} from "@/lib/auth";
 import {headers} from "next/headers";
 import {redirect} from "next/navigation";
@@ -8,9 +8,9 @@ export default async function Page() {
     headers: await headers(),
   });
 
-  if(!session) {
-    redirect("/sign-in");
+  if(!!session) {
+    redirect("/");
   }
 
-  return <HomeView/>;
+  return <SignUpView/>;
 }
