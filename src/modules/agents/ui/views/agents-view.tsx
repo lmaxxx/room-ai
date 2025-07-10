@@ -5,6 +5,8 @@ import {useSuspenseQuery} from "@tanstack/react-query";
 import LoadingState from "@/components/loading-state";
 import ErrorState from "@/components/error-state";
 import React from "react";
+import ResponseDialog from "@/components/response-dialog";
+import {Button} from "@/components/ui/button";
 
 export default function AgentsView() {
   const trpc = useTRPC()
@@ -12,6 +14,7 @@ export default function AgentsView() {
 
   return (
     <div>
+      <Button>Some action</Button>
       {JSON.stringify(data, null, 2)}
     </div>
   )
