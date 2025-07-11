@@ -1,4 +1,4 @@
-import {CommandDialog, CommandInput, CommandItem, CommandList, CommandResponsiveDialog} from "@/components/ui/command";
+import {CommandInput, CommandItem, CommandList, CommandResponsiveDialog} from "@/components/ui/command";
 import {Dispatch, SetStateAction} from "react";
 
 type Props = {
